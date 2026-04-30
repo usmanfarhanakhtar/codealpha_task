@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FRONT PAGE -->
+<div id="home">
+  <div class="box">
+    <h1>Welcome to My Gallery</h1>
+    <p>Click below to explore beautiful images</p>
+    <button onclick="showGallery()">View Gallery</button>
+  </div>
+</div>
+
+<!-- GALLERY PAGE -->
+<div id="gallery-page" style="display:none;">
+  <h1>My Image Gallery</h1>
+
+  <div class="gallery">
+    <img src="1.jpg" onclick="openImage(0)">
+    <img src="2.jpg" onclick="openImage(1)">
+    <img src="3.jpg" onclick="openImage(2)">
+    <img src="6.jpg" onclick="openImage(3)">
+    <img src="7.jpg" onclick="openImage(4)">
+    <img src="8.jpg" onclick="openImage(5)">
+  </div>
+
+  <button onclick="goHome()" class="back-btn">⬅ Back</button>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span class="close" onclick="closeImage()">×</span>
+  
+  <span class="prev" onclick="prevImage()">❮</span>
+  <img id="lightbox-img">
+  <span class="next" onclick="nextImage()">❯</span>
+
+  <!-- ZOOM BUTTONS -->
+  <button class="zoom-in" onclick="zoomIn()">＋</button>
+  <button class="zoom-out" onclick="zoomOut()">－</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
